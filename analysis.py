@@ -12,7 +12,7 @@ print("IRIS Data Set:")
 print(df.loc[:, df.columns != 'Count'])
 
 print("")
-print("The number of each species is:")
+print("The number of each species is: ")
 print(df["species"].value_counts())
 
 
