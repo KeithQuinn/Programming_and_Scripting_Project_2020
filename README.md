@@ -8,5 +8,3 @@ In 1936, the british biologist and statistician Ronald Fisher published “The u
 To demonstrate LDA Fisher used data that was collected by the American botanist Edgar Anderson. The data was collected for three related species of IRIS flower; setosa, virginica and versicolor see Figure 1.
 
 ![Setosa, Versicolor and Virginica IRIS species](Setosa_Versicolor,_Virginica_named.PNG) Figure 1: species of IRIS flower
-
-
