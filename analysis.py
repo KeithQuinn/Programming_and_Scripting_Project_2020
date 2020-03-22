@@ -8,6 +8,19 @@ sepallength = df["sepal_length"]
 petalwidth = df["petal_width"]
 petallength = df["petal_length"]
 
+"""
+plt.figure(figsize=(12,8))
+plt.hist([sepalwidth, petalwidth], bins = 20, rwidth = 1, color = ["g", "r"], label = ["Sepal_Width", "Petal_Width"])
+plt.legend()
+plt.title("Sepal_Width")
+plt.xlabel("Measurment in cm")
+plt.ylabel("Observations")
+plt.savefig("Multi_Hist")
+plt.show(block=False)
+plt.pause(4)
+plt.close("all")
+"""
+
 plt.figure(figsize=(12,8))
 plt.hist(sepalwidth, bins = 20, rwidth = 0.9)
 plt.title("Sepal_Width")
