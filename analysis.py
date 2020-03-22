@@ -8,6 +8,14 @@ sepallength = df["sepal_length"]
 petalwidth = df["petal_width"]
 petallength = df["petal_length"]
 
+print("IRIS Data Set:")
+print(df.loc[:, df.columns != 'Count'])
+
+print("")
+print("The number of each species is:")
+print(df["species"].value_counts())
+
+
 """
 plt.figure(figsize=(12,8))
 plt.hist([sepalwidth, petalwidth], bins = 20, rwidth = 1, color = ["g", "r"], label = ["Sepal_Width", "Petal_Width"])
@@ -19,7 +27,6 @@ plt.savefig("Multi_Hist")
 plt.show(block=False)
 plt.pause(4)
 plt.close("all")
-"""
 
 plt.figure(figsize=(12,8))
 plt.hist(sepalwidth, bins = 20, rwidth = 0.9)
@@ -152,3 +159,4 @@ plt.savefig("Sepal_Width_Length_set_vir_ver")
 plt.show(block=False)
 plt.pause(4)
 plt.close("all")
+"""
