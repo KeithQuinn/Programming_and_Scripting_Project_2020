@@ -7,5 +7,5 @@ In 1936 the british biologist and statistician Ronald Fisher published “The us
 
 Fisher used data that was collected by the American botanist Edgar Anderson. The data was collected for three related species of IRIS flower, setosa, virginica and versicolor see Figure 1. Two of the three species were collected on the same day , from the same pasture and measured at the same time with the same apparatus by the same person. 
 
-![](C:\Users\quinnk4\Desktop\Programming_and_Scripting_Project_2020\Setosa_Versicolor,_Virginica_named.PNG)
+![Setosa, Versicolor and Virginica IRIS species](Setosa_Versicolor,_Virginica_named.PNG)
 
