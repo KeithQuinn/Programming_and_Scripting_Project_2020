@@ -1,8 +1,51 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from scipy import stats
+from scipy.stats import norm
+
 
 df = pd.read_csv("Fishers IRIS Data Set.csv")
 
+sepalwidth = df["sepal_width"]
+sepallength = df["sepal_length"]
+petalwidth = df["petal_width"]
+petallength = df["petal_length"]
+
+shapiro_test_sepal_width = (stats.shapiro(sepalwidth))
+shapiro_test_sepal_length = (stats.shapiro(sepallength))
+shapiro_test_petal_width = (stats.shapiro(petalwidth))
+shapiro_test_petal_length = (stats.shapiro(petallength))
+
+if (shapiro_test_sepal_width[1]) >= 0.05:
+    print("Sepal Width is Normally Distributed")
+else:
+    print("Sepal Width is not Normally Distributed")
+
+if (shapiro_test_sepal_length[1]) >= 0.05:
+    print("Sepal Lenght is Normally Distributed")
+else:
+    print("Sepal Lenght is not Normally Distributed")
+
+if (shapiro_test_petal_width[1]) >= 0.05:
+    print("Petal Width is Normally Distributed")
+else:
+    print("Petal Width is not Normally Distributed")
+
+if (shapiro_test_petal_length[1]) >= 0.05:
+    print("Petal Length is Normally Distributed")
+else:
+    print("Petal Length is not Normally Distributed")
+
+
+
+#result = stats.shapiro(sepalwidth)
+#print(result)
+
+
+
+
+
+"""
 sepalwidth = df["sepal_width"]
 sepallength = df["sepal_length"]
 petalwidth = df["petal_width"]
@@ -15,8 +58,6 @@ print("")
 print("The number of each species is: ")
 print(df["species"].value_counts())
 
-
-"""
 plt.figure(figsize=(12,8))
 plt.hist([sepalwidth, petalwidth], bins = 20, rwidth = 1, color = ["g", "r"], label = ["Sepal_Width", "Petal_Width"])
 plt.legend()
@@ -158,5 +199,5 @@ plt.legend()
 plt.savefig("Sepal_Width_Length_set_vir_ver")
 plt.show(block=False)
 plt.pause(4)
-plt.close("all")
+plt.close("all")]
 """
