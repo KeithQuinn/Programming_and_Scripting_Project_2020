@@ -38,11 +38,6 @@ else:
 
 
 
-#result = stats.shapiro(sepalwidth)
-#print(result)
-
-
-
 
 
 """
