@@ -76,11 +76,18 @@ Refer to figure 4 for the code used to check normality.
 Refer to figure 5 for the result of the normality test.
 | ![](Normality_test_out.PNG)|
 | :--: |
-| *Figure 4 normality test results* |
+| *Figure 5 normality test results* |
 
 With reference to Figure 4 it can be seen that Sepal Width is the only variable that follows a normal distribution.
 
+### Individual Variable (Univariate) Analysis
 
+Having assessed the data for normality, the next step in the analysis is to look at univariate analysis. For this analysis a histogram, boxplot and a single variable scatter plot for each variable of the four variables (petal length, petal width, sepal length and sepal with) will be provided.
+
+Refer to figure 6 for the code used to plot the histograms.
+| ![](Histogram_in.PNG)|
+| :--: |
+| *Figure 6 code to plot histograms* |
 
 
 
