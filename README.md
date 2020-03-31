@@ -66,14 +66,14 @@ With reference to Figure 3 the data set looks acceptable. It can be seen that th
 ### Data Set Analysis
 The first step is checking if the data follows a normal distribution. This test was compete using the Shapiro-Wilk normality test  considered the most powerful test when testing for a normal distribution https://towardsdatascience.com/6-ways-to-test-for-a-normal-distribution-which-one-to-use-9dcf47d8fa93.
 
-Refer to figure 4 for the code used to check normality.
+Refer to Figure 4 for the code used to check normality.
 
 | ![](Normality_test_in.PNG)|
 | :--: |
 | *Figure 4 normality test in* |
 
 
-Refer to figure 5 for the result of the normality test.
+Refer to Figure 5 for the result of the normality test.
 | ![](Normality_test_out.PNG)|
 | :--: |
 | *Figure 5 normality test results* |
@@ -84,10 +84,38 @@ With reference to Figure 4 it can be seen that Sepal Width is the only variable 
 
 Having assessed the data for normality, the next step in the analysis is to look at univariate analysis. For this analysis a histogram, boxplot and a single variable scatter plot for each variable of the four variables (petal length, petal width, sepal length and sepal with) will be provided.
 
-Refer to figure 6 for the code used to plot the histograms.
+Refer to Figure 6 for the code used to plot the histograms.
 | ![](Histogram_in.PNG)|
 | :--: |
-| *Figure 6 code to plot histograms* |
+| *Figure 6 histogram code* |
+
+The code in Figure 6 saves the files in the same folder as the analysis.py file. Figure 7 is included in this README for reference where all histograms are included in a single PNG file. A point of interest here is that through the Shapiro-Wilk normality test previously, Sepal Width was the only variable which followed a normal distribution. With reference to Figure 7 Sepal width histogram also looks the most "normal".
+
+| ![](Multi_Hist.png)|
+| :--: |
+| *Figure 7 histograms for all individual variables* |
+
+The next univariate plot are boxplots, refer to Figure 8 for the code used to plot the boxplots.
+| ![](Boxplot_in.PNG)|
+| :--: |
+| *Figure 8 boxplot code* |
+
+The code in Figure 8 saves the files in the same folder as the analysis.py file. Figure 9 is included in this README for reference where all boxplots are included in a single PNG file.
+
+| ![](Multi_Box.png)|
+| :--: |
+| *Figure 9 boxplots for all individual variables* |
+
+What's interesting in Figure 9 is that looking at sepal width and sepal length it would be difficult to seperate the 3 species as there is lot of overlap however with reference to petal wdth and petal length it can be clearly seen that the setosa has a smaller petal in both the lenght and width dimensions.
+
+
+
+
+
+
+
+
+
 
 
 
