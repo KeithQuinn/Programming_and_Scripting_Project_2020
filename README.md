@@ -26,7 +26,7 @@ create a deck of presentation slides, but rather to present your code and its ou
 them.
 
 ## *Introduction*
-In 1936, the british biologist and statistician Ronald Fisher published “The use of multiple measurements in taxonomic problems”. In this paper Fisher states that “when two or more poplualtions have been measured in several characters special interest attaches to certain linear functions of the measurements by which the populations are discriminated”. This is known as linear discriminant analysis (LDA). LDA is discussed in this README file in section X. The ai
+In 1936, the british biologist and statistician Ronald Fisher published “The use of multiple measurements in taxonomic problems”. In this paper Fisher states that “when two or more poplualtions have been measured in several characters special interest attaches to certain linear functions of the measurements by which the populations are discriminated”. This is known as linear discriminant analysis (LDA).
 
 ## *Anderson's IRIS Data Set*
 To demonstrate LDA Fisher used data that was collected by the American botanist Edgar Anderson. The data was collected for three related species of IRIS flower; setosa, virginica and versicolor depicted in Figure 1. In total data was collected for 50 samples of each of the three species, a total of 150 samples. For each of the samples four variables were measured;
@@ -78,11 +78,11 @@ Refer to Figure 5 for the result of the normality test.
 | :--: |
 | *Figure 5 normality test results* |
 
-With reference to Figure 4 it can be seen that Sepal Width is the only variable that follows a normal distribution.
+With reference to Figure 5 it can be seen that Sepal Width is the only variable that follows a normal distribution.
 
 ### Individual Variable (Univariate) Analysis
 
-Having assessed the data for normality, the next step in the analysis is to look at univariate analysis. For this analysis a histogram, boxplot and a single variable scatter plot for each variable of the four variables (petal length, petal width, sepal length and sepal with) will be provided.
+Having assessed the data for normality, the next step in the analysis is to look at univariate analysis. For this analysis a histogram, boxplot and a single variable scatter plot for each of the four variables (petal length, petal width, sepal length and sepal with) will be provided.
 
 Refer to Figure 6 for the code used to plot the histograms.
 | ![](Histogram_in.PNG)|
@@ -108,11 +108,11 @@ The code in Figure 8 saves the files in the same folder as the analysis.py file.
 
 What's interesting in Figure 9 is that looking at sepal width and sepal length it would be difficult to seperate the 3 species as there is lot of overlap however with reference to petal wdth and petal length it can be clearly seen that the setosa has a smaller petal in both the lenght and width dimensions.
 
-The next univariate plot is a scatter plot, refer to Figure 10 for the code used to plot the boxplots. It may seem counter intuitive that only one variable of interest is being plotted on the scatter plot. Scatterplots are often used to undersatand relationships between two variables. However as an excercise it has been decided to include a column in the data set called count and use this as a second variable to plot the variable of interest against (two variables are required to plot a scatter plot, one on the x-axis and one on the y-axis, for this exercise count is used on the x-axis) 
+The next univariate plot is a scatter plot, refer to Figure 10 for the code used to plot the scatter plots. It may seem counter intuitive that only one variable of interest is being plotted on the scatter plot as they are typically used to understand relationships between two variables. However as an excercise it has been decided to include a column in the data set called count and use this as a second variable to plot the variable of interest against (two variables are required to plot a scatter plot, one on the x-axis and one on the y-axis, for this exercise count is used on the x-axis). 
 
-Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code. The thought process here was to seperate each into their own dataframe, then define each of the four variables of each species. In the boxplot code above it was possible to seperate the species by plotting the species on the x-axis, later in this README "hue" is used to seperate the species. 
+Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code in Figure 10. The thought process here was to seperate each into their own dataframe, then define the four variables of each species. 
 
-It's intreresting to research different methods to seperate the species into their individual groups for analysis. One thing about programming that has become apparent is there are always many ways to solve every problem. 
+In the boxplot code from Figure 8 it was possible to seperate the species by plotting the species on the x-axis, later in this README "hue" is used to seperate the species. It's interesting to research different methods to seperate the species into their individual groups for analysis. One thing about programming that has become apparent is there are always many ways to solve every problem. 
 | ![](single_scatter_in.PNG)|
 | :--: |
 | *Figure 10 scatter plot code with one variable of interest* |
