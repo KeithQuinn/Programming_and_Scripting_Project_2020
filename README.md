@@ -95,7 +95,7 @@ The code in Figure 6 saves the files in the same folder as the analysis.py file.
 | :--: |
 | *Figure 7 histograms for all individual variables* |
 
-The next univariate plot are boxplots, refer to Figure 8 for the code used to plot the boxplots.
+The next univariate plot is the boxplot, refer to Figure 8 for the code used to plot the boxplots.
 | ![](Boxplot_in.PNG)|
 | :--: |
 | *Figure 8 boxplot code* |
@@ -108,23 +108,28 @@ The code in Figure 8 saves the files in the same folder as the analysis.py file.
 
 What's interesting in Figure 9 is that looking at sepal width and sepal length it would be difficult to seperate the 3 species as there is lot of overlap however with reference to petal wdth and petal length it can be clearly seen that the setosa has a smaller petal in both the lenght and width dimensions.
 
+The next univariate plot is a scatter plot, refer to Figure 10 for the code used to plot the boxplots. It may seem counter intuitive that only one variable of interest is being plotted on the scatter plot. Scatterplots are often used to undersatand relationships between two variables. However as an excercise it has been decided to include a column in the data set called count and use this as a second variable to plot the variable of interest against (two variables are required to plot a scatter plot, one on the x-axis and one on the y-axis, for this exercise count is used on the x-axis) 
+
+Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code. The thought process here was to seperate each into their own dataframe, then define each of the four variables of each species. In the boxplot code above it was possible to seperate the species by plotting the species on the x-axis, later in this README "hue" is used to seperate the species. 
+
+It's intreresting to research different methods to seperate the species into their individual groups for analysis. One thing about programming that has become apparent is there are always many ways to solve every problem. 
+| ![](single_scatter_in.PNG)|
+| :--: |
+| *Figure 10 scatter plot code with one variable of interest* |
+
+The code in Figure 10 is only for sepal width, and is for reference. In the analysis.py file this code is repeated for all variables. Refer to Figure 11 for the output.
+| ![](single_scatter_out.PNG)|
+| :--: |
+| *Figure 11 scatter plots showing one variable of interest for all variables* |
+
+With reference to Figure 11 it's interesting to see that when looking at sepal width and sepal length it would be difficult to seperate the 3 species as there is lot of overlap, however with reference to petal wdth and petal length it can be clearly seen that the setosa has a smaller petal in both the lenght and width dimensions.
+
+This is of no surprise as this was presented earlier with the boxplots, it's interesting to see the different ways of presenting data and telling the same story through different methods.
+
+### Multivariable Analysis
 
 
 
-
-
-
-
-
-
-
-
-https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
-
-box plots
-https://rpubs.com/StatGirl302/Manova_Boxplots_IRIS
-
-https://medium.com/@harimittapalli/exploratory-data-analysis-iris-dataset-9920ea439a3e
 
 ### Linear Discriminant Analysis (LDA)
 https://rpubs.com/pranaugi011089/98288
