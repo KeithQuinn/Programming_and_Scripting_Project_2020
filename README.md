@@ -113,7 +113,7 @@ The next univariate plot is a scatter plot, refer to Figure 10 for the code used
 Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code in Figure 10. The thought process here was to seperate each into their own dataframe, then define the four variables of each species. 
 
 In the boxplot code from Figure 8 it was possible to seperate the species by plotting the species on the x-axis, later in this README "hue" is used to seperate the species. It's interesting to research different methods to seperate the species into their individual groups for analysis. One thing about programming that has become apparent is there are always many ways to solve every problem. 
-| ![](single_scatter_in.png)|
+| ![](Single_Scatter_in.png)|
 | :--: |
 | *Figure 10 scatter plot code with one variable of interest* |
 
@@ -133,11 +133,11 @@ Using scatter plots two varibles are considered and plotted, the objective is to
 
 The Seaborn pairplot code was also executed which plots all possible pairs of variables on scatter plots, seperated by the species through the hue feature. refer to Figure 13 for Seaborn pairplot code. This section of code shows how efficient or unefficient a program can be. When programming unefficiently it took 12 lines of code per plot and 12 plots, a total of 144 lines of code, for the Seaborn pairplot 6 lines of code was all that was needed 4% of the original code. Refer to Figure 14 for Seaborn pairplot.
 
-| ![](scatter_in.png)|
+| ![](scatter_in.PNG)|
 | :--: |
 | *Figure 12 scatter plot code (important to note that this code was repeated 12 times changing the pairs of variables each time)* |
 
-| ![](pairplot_in.png)|
+| ![](pairplot_in.PNG)|
 | :--: |
 | *Figure 13 scatter plot code using Seaborn pairplot* |
 
@@ -154,7 +154,7 @@ Linear Discriminant Analysis (LDA) is a technique used to reduce the number of d
 
 Although LDA is not included in the code, it was researched as part of the project and so it was felt worthwhile to include the explanation above and also the result of running LDA through pyton, the result of which is presented in Figure 15.
 
-| ![](LDA.png)|
+| ![](LDA.PNG)|
 | :--: |
 | *Figure 15 linear discriminant analysis* |
 
