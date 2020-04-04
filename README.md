@@ -127,10 +127,57 @@ With reference to Figure 11 it's interesting to see that when looking at sepal w
 This is of no surprise as this was presented earlier with the boxplots, it's interesting to see the different ways of presenting data and telling the same story through different methods.
 
 ### Multivariable Analysis
+Multivariate analysis is where more than one variable is considered for a single outcome. It is relevant in the analysis of the IRIS data set as there are four variables for each species. In the univariate analysis it was determined that it wasn't possible to seperate the three species. The best univariate analysis resulted in two clusters of data where setosa was seperated based on petal size. It was not possible to seperate virginica and versicolor. With multivariate analysis the objective is to determine if the cluster containing virginica and versicolor can be seperated by spoecies.
 
+Using scatter plots two varibles are considered and plotted, the objective is to identify the different species of IRIS flower. As an learning excercise each of the pair of variables were plotted on a scatter plot and saved as individual .png files refer to Figure 12 for code.
 
+The Seaborn pairplot code was also executed which plots all possible pairs of variables on scatter plots, seperated by the species through the hue feature. refer to Figure 13 for Seaborn pairplot code. This section of code shows how efficient or unefficient a program can be. When programming unefficiently it took 12 lines of code per plot and 12 plots, a total of 144 lines of code, for the Seaborn pairplot 6 lines of code was all that was needed 4% of the original code. Refer to Figure 14 for Seaborn pairplot.
 
+| ![](scatter_in.png)|
+| :--: |
+| *Figure 12 scatter plot code (important to note that this code was repeated 12 times changing the pairs of variables each time)* |
 
-### Linear Discriminant Analysis (LDA)
+| ![](pairplot_in.png)|
+| :--: |
+| *Figure 13 scatter plot code using Seaborn pairplot* |
+
+| ![](pairplot.png)|
+| :--: |
+| *Figure 14 Seaborn pairplot output* |
+
+With reference to Figure 14 the advantage of multivariate analysis is highlighted. The obvious observation which we have already proven through univariate analysis is the two clusters of data. One cluster being the setosa, easily seperable based on petal size. The advantage with multivariate is that the second cluster of versicolor and virginica are much more seperable. There is some overlap between the species but much less than what was observed through univariate analysis. Consider Petal length vs petal width the three clusters can almost be seperated into setosa at bottom left, versiclor in the centre and virginica in the top right of the plot.
+
+### Linear Discriminant Analysis (LDA) - Discussion
+Having proven the advantage of multivariate analysis using two variables to seperate the species. Would it be an advantage if we could plot all four variables for each of the species. It would be ideal if we could plot all four variables, however it's impossible to draw a four dimensional graph. Could all four dimensions be represented on a two dimensioal graph? The answer is yes by using LDA.
+
+Linear Discriminant Analysis (LDA) is a technique used to reduce the number of dimensions. In the IRIS data set it's possible to reduce the four variables to two dimensions. The objective of LDA is to maximise the seperability between groups. LDA projects the data onto a new axis in a way to maximise the seperation of the groups. The new axis is created according to two criteria considered simultaneously. Firstly maximise the distance between the means, secondly minimise the variation within each group.
+
+Although LDA is not included in the code, it was researched as part of the project and so it was felt worthwhile to include the explanation above and also the result of running LDA through pyton, the result of which is presented in Figure 15.
+
+| ![](LDA.png)|
+| :--: |
+| *Figure 15 linear discriminant analysis* |
+
+With reference to Figure 15 it can be seen that through LDA reduced the four variables down to two dimensions; Function 1 and Function 2. Through LDA the species have better seperation than when two variables were considered earlier. It's interesting to note also that when through cross validation there were only 3 misclassifications between versicolor and virginica. 
+
 https://rpubs.com/pranaugi011089/98288
 
+## Summary
+The Iris data set was researched. Some analysis was carried out to ensure the data set was correct. This analysis included checking that the five variables and 150 rows were in the dataset. As part of the initial analysis it was also confirmed that 50 of each species was available and each variable analysed to check if they followed a normal distribution (Shapiro-Wilk).
+
+Next some univariate analysis was conducted, this included analysis using histograms, boxplots, and single variable scatter plots. From the univariate analysis it was possible to seperate the data into two clusters. It wasn't possible to seperate versicolor and virginica with any degree of confidence.
+
+Finally multivariate analysis was complete using scatter plots.It was possible to seperate the three species to some degree but there was always a level of overlap bewteen versicolor and virginica, albeit much less than the overlap observed through univariate analysis.  
+
+Finally a discussion around linear discriminant analysis (LDA) is included. Through LDA it was possible to seperate the three species with a high degree of confidence. Of the 100 data points between  versicolor and virginica there were only 3 misclassifications.
+
+## Conclusion
+Enjoyed the challenge, one of the key learnings from this project is that there's always multiple ways to write a program for a desired outcome. It was interesting how to read in the dataframe from the .CSV file and to pull the data and plot as required. It was also interesting to manipulate the dataframe to ignore certain columns or create new data frames that include the desired columns.
+
+Good learnings obtained when proving how difficult it was to seperate the species of Iris when using univariate analysis, but with multivariate analysis the seperability was greatly improved to the point that through LDA there were only 3 misclassifications from 150 data points.
+
+Another interesting learning was that when plotting the scatter plots it took 144 lines of code to plot all variables but by using Seaborn paiplot it only required 6 lines of code for the same outcome. 
+
+When reviewing the finished code there are loads of ways to improve it but leaving it the way it is highlights the long winded approach that was taken to achieve some of the outcomes, with improvement in knowledge these outcomes could be achieved much simpler now with the learnings from competing the project but that's what learning is all about.
+
+I have spent many hours on this project, at times pulling my hair out but mostly enjoying the challenge. Programming was completely new to me, had never written a single line of code in my life but after completing this project I feel that I have acquired a solid programming foundation on which to build.
