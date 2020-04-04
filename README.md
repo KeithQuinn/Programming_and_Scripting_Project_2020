@@ -113,7 +113,7 @@ The next univariate plot is a scatter plot, refer to Figure 10 for the code used
 Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code in Figure 10. The thought process here was to seperate each into their own dataframe, then define the four variables of each species. 
 
 In the boxplot code from Figure 8 it was possible to seperate the species by plotting the species on the x-axis, later in this README "hue" is used to seperate the species. It's interesting to research different methods to seperate the species into their individual groups for analysis. One thing about programming that has become apparent is there are always many ways to solve every problem. 
-| ![](single_scatter_in.PNG)|
+| ![](Single_Scatter_in.PNG)|
 | :--: |
 | *Figure 10 scatter plot code with one variable of interest* |
 
