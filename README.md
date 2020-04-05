@@ -42,10 +42,10 @@ To demonstrate LDA Fisher used data that was collected by the American botanist 
 
 
 ### Checking the Data Set
-Dataset obtained from 
+Dataset obtained from:
 https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv
 
-The first step is to do some simple checks on the data and compare that with what we know. There are four measurements per sample and 50 samples of each of the three species. The first step is to run a simple script to check that the data set obtained meet this criteria.
+The first step is to do some simple checks on the data and compare that with what we know. There are four measurements per sample and 50 samples of each of the three species. The first step is to run a simple script to check that the data set obtained meets this criteria.
 
 |![](IRIS_data_in.PNG)|
 | :--: |
