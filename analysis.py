@@ -160,7 +160,7 @@ plt.close("all")
 
 #================  single variable scatter plots as part of univariate analysis  ================
 
-# Setting up a setosa_df, virginica_df and a versicolor_df.
+# setting up a setosa_df, virginica_df and a versicolor_df.
 
 setosa_df = df[df["species"] == "setosa"]
 countset = setosa_df["Count"]

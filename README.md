@@ -42,7 +42,8 @@ To demonstrate LDA Fisher used data that was collected by the American botanist 
 
 
 ### Checking the Data Set
-Dataset obtained from https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv
+Dataset obtained from 
+https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv
 
 The first step is to do some simple checks on the data and compare that with what we know. There are four measurements per sample and 50 samples of each of the three species. The first step is to run a simple script to check that the data set obtained meet this criteria.
 
@@ -53,7 +54,9 @@ The first step is to do some simple checks on the data and compare that with wha
 
 *Explaining the code*
 
-Import pandas, then set up a dataframe from the .csv file. In this data set there is a column called "count" included. This column is required later for univariate analysis. However for this part of the analysis, this column is to be ignored. To understand how to ignore the column some research was required and the solution was found here: https://stackoverflow.com/questions/29763620/how-to-select-all-columns-except-one-column-in-pandas
+Import pandas, then set up a dataframe from the .csv file. In this data set there is a column called "count" included. This column is required later for univariate analysis. However for this part of the analysis, this column is to be ignored. To understand how to ignore the column some research was required and the solution was found here: 
+
+https://stackoverflow.com/questions/29763620/how-to-select-all-columns-except-one-column-in-pandas
 
  The first section of the code checks that the correct columns are there and the number of rows and columns are as expected. The last section of code is to check if there are 50 of each species as expected.
 
@@ -66,6 +69,10 @@ With reference to Figure 3 it can be seen that there are 5 columns and 150 rows.
 ### *Data summary*
 
 The next step is to output a summary of each variable to a single text file. The text file is named "summary_of_variables" and is saved in the same directory as the analyis.py file. See Figure 4 for the code to complete this part of the project. A second dataframe was set up to ignore the "Count" column. There is also a snip of the text file provided in Figure 5.
+
+https://stackoverflow.com/questions/11285613/selecting-multiple-columns-in-a-pandas-dataframe
+
+https://www.w3resource.com/pandas/dataframe/dataframe-to_string.php
 
 | ![](summary_in.PNG)|
 | :--: |
@@ -100,6 +107,8 @@ Having assessed the data for normality, the next step in the analysis is to look
 
 *Important to note that the same code is repeated for the four variables, therefor only the code for the first plot is included here. This trend is applied throughout this README.*
 
+https://realpython.com/python-histograms/
+
 | ![](Histogram_in.PNG)|
 | :--: |
 | *Figure 8 histogram code* |
@@ -111,6 +120,9 @@ The code in Figure 8 saves the files in the same folder as the analysis.py file.
 | *Figure 9 histograms for all individual variables* |
 
 The next univariate plot is the boxplot, refer to Figure 10 for the code used to plot the boxplots.
+
+https://seaborn.pydata.org/generated/seaborn.boxplot.html
+
 | ![](Boxplot_in.PNG)|
 | :--: |
 | *Figure 10 boxplot code* |
@@ -125,7 +137,9 @@ What's interesting in Figure 11 is that looking at sepal width and sepal length 
 
 The next univariate plot is a scatter plot, refer to Figure 12 for the code used to plot the scatter plots. It may seem counter intuitive that only one variable of interest is being plotted on the scatter plot as they are typically used to understand relationships between two variables. However as an excercise it has been decided to include a column in the data set called "Count" and use this as a second variable to plot the variable of interest against (two variables are required to plot a scatter plot, one on the x-axis and one on the y-axis, for this exercise "Count" is used on the x-axis).
 
-Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code in Figure 12. The thought process here was to seperate each into their own dataframe, then define the four variables of each species. 
+Another important point is that to do this the three species had to be individually defined, this can be seen in the first part of the code in Figure 12. The thought process here was to seperate each into their own dataframe, then define the four variables of each species.
+
+https://stackoverflow.com/questions/24768657/replace-column-values-based-on-another-dataframe-python-pandas-better-way
 
 In the boxplot code from Figure 10 it was possible to seperate the species by plotting the species on the x-axis, later in this README "hue" is used as part of the Seaborn pairplot to seperate the species. It's interesting to research different methods to seperate the species into their individual groups for analysis. One thing about programming that has become apparent is there are always many ways to solve every problem.
 
@@ -152,9 +166,11 @@ The Seaborn pairplot code was also executed which plots all possible pairs of va
 
 | ![](scatter_in.PNG)|
 | :--: |
-| *Figure 14 scatter plot code (important to note that this code was repeated 12 times changing the pairs of variables each time)* |
+| *Figure 14 scatter plot code, important to note that this code was repeated 12 times* |
 
-| ![](pairplot_in.PNG)|
+https://seaborn.pydata.org/generated/seaborn.pairplot.html
+
+| ![](pairplot_in.PNG) |
 | :--: |
 | *Figure 15 scatter plot code using Seaborn pairplot* |
 
@@ -169,34 +185,36 @@ Having proven the advantage of multivariate analysis using two variables to sepe
 
 Linear Discriminant Analysis (LDA) is a technique used to reduce the number of dimensions. In the IRIS data set it's possible to reduce the four variables to two dimensions. The objective of LDA is to maximise the seperability between groups. LDA projects the data onto a new axis in a way to maximise the seperation of the groups. The new axis is created according to two criteria considered simultaneously. Firstly maximise the distance between the means, secondly minimise the variation within each group.
 
+https://www.youtube.com/watch?v=azXCzI57Yfc&t=509s
+
 Although LDA is not included in the code, it was researched as part of the project and so it was felt worthwhile to include the explanation above and also the result of running LDA through pyton, the result of which is presented in Figure 17.
 
 | ![](LDA.PNG)|
 | :--: |
 | *Figure 17 linear discriminant analysis* |
 
-With reference to Figure 17 it can be seen that through LDA reduced the four variables down to two dimensions; Function 1 and Function 2. Through LDA the species have better seperation than when two variables were considered earlier. It's interesting to note also that when through cross validation there were only 3 misclassifications between versicolor and virginica.
+With reference to Figure 17 it can be seen that through LDA reduced the four variables down to two dimensions; Function 1 and Function 2. Through LDA the species have better seperation than when two variables were considered earlier. It's interesting to note also that when cross validated, there were only three misclassifications between versicolor and virginica.
 
 https://rpubs.com/pranaugi011089/98288
 
 ## Summary
-The Iris data set was researched. Some analysis was carried out to ensure the data set was correct. This analysis included checking that the five variables and 150 rows were in the dataset. As part of the initial analysis it was also confirmed that 50 of each species was available and each variable analysed to check if they followed a normal distribution (Shapiro-Wilk). To finish off the initial analysis there an output a summary of each variable was saved to a single text file. This summary included count, mean, std dev and some quartile information.
+The Iris data set was researched. Some analysis was carried out to ensure the data set was correct. This analysis included checking that the five variables and 150 rows were in the dataset. As part of the initial analysis it was confirmed that 50 of each species were within the dataset. All variables were analysed to check if they followed a normal distribution (Shapiro-Wilk). To finish off the initial analysis there was an output summary of each variable saved to a single text file. This summary included count, mean, std dev and some quartile information.
 
-A column called "Count" was included in the dataset, this was included as some single variable (of interest) scatter plots were required as part of the univariate analysis. Including count proved to be more challenging as when doing the initial analysis count had to be ignored, this took time to research and understand. Then later in the analysis there was arequirement to send a summary of the data to a text file. To overcome this issue a second dataframe was set up called df2 where the count column was not pulled into the second data frame. At the end of the programme the Seaborn pairplot was included, using the original datarame count was included which was not required. By using df2 the pairplot worked perfectly. Loads of learning around dataframes and how to manipulate them was achieved here.  
+A column called "Count" was included in the dataset, this was included as some single variable scatter plots were required as part of the univariate analysis. Including count proved to be more awkward at times because when doing the initial analysis count had to be ignored, this took time to research and understand. Then later in the analysis there was arequirement to send a summary of the data to a text file. To overcome this a second dataframe was set up called df2 where the count column was not pulled into the second data frame. At the end of the programme the Seaborn pairplot was included, when using the original dataframe "Count" was included in the pairplot but it wasn't required. By using df2 the pairplot worked perfectly. Loads of learning around dataframes and how to manipulate them was achieved here.  
 
-Next some univariate analysis was conducted, this included analysis using histograms, boxplots, and single variable scatter plots. From the univariate analysis it was possible to seperate the data into two clusters. It wasn't possible to seperate versicolor and virginica with any degree of confidence.
+Next some univariate analyses was conducted, this included analysis using histograms, boxplots, and single variable scatter plots. From the univariate analysis it was possible to seperate the data into two clusters. It wasn't possible to seperate versicolor and virginica with any degree of confidence.
 
 Finally multivariate analysis was complete using scatter plots.It was possible to seperate the three species to some degree but there was always a level of overlap bewteen versicolor and virginica, albeit much less than the overlap observed through univariate analysis.  
 
-Finally a discussion around linear discriminant analysis (LDA) is included. Through LDA it was possible to seperate the three species with a high degree of confidence. Of the 100 data points between  versicolor and virginica there were only 3 misclassifications.
+Finally a discussion around linear discriminant analysis (LDA) is included. Through LDA it was possible to seperate the three species with a high degree of confidence. Of the 100 data points between versicolor and virginica there were only three misclassifications.
 
 ## Conclusion
-Enjoyed the challenge, one of the key learnings from this project is that there's always multiple ways to write a program for a desired outcome. It was interesting how to read in the dataframe from the .CSV file and to pull the data and plot as required. It was also interesting to manipulate the dataframe to ignore certain columns or create new data frames that include the desired columns.
+Enjoyed the challenge, one of the key learnings from this project is that there's always multiple ways to write a program for a desired outcome. It was interesting learning how to read in the dataframe from the CSV file and to pull the data and plot as required. It was also interesting to manipulate the dataframe to ignore certain columns or create new data frames that include desired columns from original dataframe.
 
 Good learnings obtained when proving how difficult it was to seperate the species of Iris when using univariate analysis, but with multivariate analysis the seperability was greatly improved to the point that through LDA there were only 3 misclassifications from 150 data points.
 
-Another interesting learning was that when plotting the scatter plots it took 144 lines of code to plot all variables but by using Seaborn paiplot it only required 6 lines of code for the same outcome. 
+Another interesting learning was that when plotting the scatter plots it took 144 lines of code to plot all variables but by using Seaborn paiplot it only required 6 lines of code for the same outcome.
 
-When reviewing the finished code there are loads of ways to improve it but leaving it the way it is highlights the long winded approach that was taken to achieve some of the outcomes, with improvement in knowledge these outcomes could be achieved much simpler now with the learnings from competing the project but that's what learning is all about.
+When reviewing the finished code there are loads of ways to improve it but leaving it the way it is highlights the long winded approach that was taken to achieve some of the outcomes. With improvement in knowledge these outcomes could be achieved more efficiently now but that's what learning is all about.
 
-I have spent many hours on this project, at times pulling my hair out but mostly enjoying the challenge. Programming was completely new to me, had never written a single line of code in my life but after completing this project I feel that I have acquired a solid programming foundation on which to build.
+I have spent many hours on this project, at times pulling my hair out but mostly enjoying the challenge. Programming was completely new to me, I had never written a single line of code in my life but after completing this project I feel that I have acquired a solid programming foundation on which to build.
